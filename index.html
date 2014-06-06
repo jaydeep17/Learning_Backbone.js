@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta content="">
+  <style></style>
+
+
+</head>
+<body>
+ hello
+ 
+ <script id="personTemplate" type="text/template">
+  <%= name %> (<%= age %>) - <%= occupation %>
+</script>
+
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+ 
+
+ <!-- Backbone stuff -->
+ <script type="text/javascript" src="js/router.js"></script>
+ <script type="text/javascript" src="js/model.js"></script>
+ <script type="text/javascript" src="js/collection.js"></script>
+ <script type="text/javascript" src="js/view.js"></script>
+ <script type="text/javascript">
+ var pv = new PeopleView({collection: peopleCollection});
+ pv.render();
+ $(document.body).append(pv.el);
+
+new Router;
+Backbone.history.start();
+
+ </script>
+</body>
+</html>
+
